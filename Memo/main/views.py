@@ -1,8 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
-def index(request):
-    return HttpResponse('<h4>check</h4>')
+def frontpage(request):
+    return render(request, 'main/frontpage.html')
 
 def slider(request):
-    return HttpResponse('<h4>FJk</h4>')
+    return render(request, 'main/slider.html')
