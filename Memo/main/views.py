@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 
-def frontpage(request):
-    return render(request, 'main/frontpage.html')
+def layout(request):
+    return render(request, 'main/layout.html')
 
 def slider(request):
     return render(request, 'main/slider.html')

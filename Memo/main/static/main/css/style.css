@@ -1,0 +1,142 @@
+.bgrnd
+{
+    width: 100%;
+
+}
+img {
+    width: 100%;
+}
+
+img#slide {
+    position: absolute;
+    width: 230px;
+    top: 200px;
+    left: 800px;
+}
+
+ul {
+    position: absolute;
+    top: 150px;
+    left: 380px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 60px;
+}
+
+h2.first {
+    margin: 0;
+    padding-left: 43%;
+    font-family: revert;
+    position: absolute;
+}
+
+h2.second {
+    /*margin: 0;*/
+    margin-top: 3%;
+    font-family: -webkit-pictograph;
+    font-weight: 100;
+    padding-top: 65px;
+}
+
+/*Animation*/
+.slide {
+    bottom: 627px;
+  width: 50px;
+  height: 80px;
+  position: relative;
+  left: 691px;
+  -webkit-animation: slideIn 2s forwards;
+  -moz-animation: slideIn 2s forwards;
+  animation: slideIn 2s forwards;
+}
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logo {
+    bottom: 727px;
+  width: 50px;
+  height: 80px;
+  position: relative;
+  left: -166px;
+  -webkit-animation: slidefd 2s forwards;
+  -moz-animation: slidefd 2s forwards;
+  animation: slidefd 2s forwards;
+}
+@-webkit-keyframes slidefd {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slidefd {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slidefd {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*Button*/
+
+.checkout {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 17px;
+    margin-bottom: 17px;}
+
+.checkout {
+    text-align: center;
+    position: absolute;
+    top: 510px;
+    left: 60px;
+}
+
+.checkout button {
+    background: #d40e1e;
+    border: none;
+    padding: 20px 60px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.checkout button:hover {
+    box-shadow: 0 0px 24px 4px #d40e1e;
+    transition: .5s;
+}
