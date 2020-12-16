@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.layout),
-    path('slider', views.slider)
+    path('slider', views.slider, name='slider')
 ]
