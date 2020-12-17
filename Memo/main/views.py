@@ -7,5 +7,5 @@ def layout(request):
 def slider(request):
     return render(request, 'main/slider.html')
 
-def endpage(request):
-    return render(request, 'main/endpage.html')
+# def endpage(request):
+#     return render(request, 'main/endpage.html')
