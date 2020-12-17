@@ -67,7 +67,6 @@ section .content h3
     padding: 0;
     display: inline-block;
     font-size: 2em;
-    /*display: 3em;*/
     transition: 0.5s;
     transform-origin: left;
     transform: scaleX(0);

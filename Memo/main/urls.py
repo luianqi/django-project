@@ -3,6 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.layout),
-    path('slider', views.slider, name='slider'), 
-    path('endpage', views.endpage, name='endpage')
+    path('slider', views.slider, name='slider')
 ]
