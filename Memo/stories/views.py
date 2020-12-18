@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Info
+from .forms import InfoForm
 
 def endpage(request):
     story = Info.objects.order_by('-date')
@@ -7,12 +8,12 @@ def endpage(request):
 
 
 def create(request):
-    return render(request, 'main/create.html')
+    form = InfoForm()
 
-# def create(request):
-#     form = InfoForm()
+    data = {
+        'form': form
+    }
+    return render(request, 'main/create.html', data)
+   
 
-#     data = {
-#         'form': form
-#     }
-#     return render(request, 'main.create', data)
+   

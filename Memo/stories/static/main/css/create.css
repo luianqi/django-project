@@ -153,10 +153,11 @@ textarea {
   transition: transform 0.3s;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato);
+/* @import url(https://fonts.googleapis.com/css?family=Lato); */
 
 @font-face {
-  font-family: 'Lato'
+  font-family: 'Lato';
+  src:  url(https://fonts.googleapis.com/css?family=Lato);
 }
 
 .footer {
