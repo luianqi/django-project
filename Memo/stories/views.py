@@ -9,10 +9,10 @@ def endpage(request):
 def create(request):
     return render(request, 'main/create.html')
 
-def create(request):
-    form = InfoForm()
+# def create(request):
+#     form = InfoForm()
 
-    data = {
-        'form': form
-    }
-    return render(request, 'main.create', data)
+#     data = {
+#         'form': form
+#     }
+#     return render(request, 'main.create', data)
