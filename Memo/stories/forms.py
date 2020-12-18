@@ -9,20 +9,24 @@ class InfoForm(ModelForm):
 
         widgets = {
             'name': TextInput(attrs= {
-                'class': 'input__field',
-                'placeholder': ''
+                'class': 'form-control',
+                'placeholder': '',
+                
             }),
             'surname': TextInput(attrs= {
-                'class': 'input__field',
-                'placeholder': ''
+                'class': 'form-control',
+                'placeholder': '',
+              
             }),
             'story': Textarea(attrs= {
-                'class': 'input__field',
-                'placeholder': ''
+                'class': 'form-control',
+                'placeholder': '',
+         
             }),
             'date': DateTimeInput(attrs= {
-                'class': 'input__field',
-                'placeholder': ''
+                'class': 'form-control',
+                'placeholder': '',
+         
     
             })
         }

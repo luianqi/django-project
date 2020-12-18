@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Info
 from .forms import InfoForm
 
@@ -8,11 +8,23 @@ def endpage(request):
 
 
 def create(request):
+    error = ''
+    if request.method == 'POST':
+        form = InfoForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = 'Form is invalid'
+            return redirect('slider')
+
     form = InfoForm()
 
     data = {
-        'form': form
+        'form': form,
+        'error': error
     }
+
+
     return render(request, 'main/create.html', data)
    
 

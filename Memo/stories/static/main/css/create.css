@@ -1,4 +1,30 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
+
+/* {
+  main .styles h1 {font-size: 50px;}
+  main .styles p {max-width: 400px; margin: 20px auto;}
+
+  .alert-warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+  }
+
+  form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+  }
+}
+ */
+
+
+
+
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
 
 *,
 *:after,
@@ -57,8 +83,8 @@ textarea {
   color: #fff;
   font-size: 1.55em;
   font-weight: bold;
-  -webkit-appearance: none;/* for box shadows to show on iOS */
-}
+  /* -webkit-appearance: none;/* for box shadows to show on iOS */
+/* }
 
 .input__field:focus {
   outline: none;
@@ -128,9 +154,9 @@ textarea {
 .input--filled .input__label::after {
   -webkit-transform: translate3d(0, 0.5em, 0);
   transform: translate3d(0, 0.5em, 0);
-}
+} */
 
-#send-button {
+/* #send-button {
   width: 200px;
   height: 60px;
   background-color: #d40e1e;
@@ -144,18 +170,18 @@ textarea {
   transition: transform 0.3s;
 }
 
-#send-button:hover,
-#send-button:focus {
+#send-button:hover, */
+/* #send-button:focus {
   outline: 0;
   background-color: #fff;
   color: #000;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-}
+} */
 
 /* @import url(https://fonts.googleapis.com/css?family=Lato); */
 
-@font-face {
+/* @font-face {
   font-family: 'Lato';
   src:  url(https://fonts.googleapis.com/css?family=Lato);
 }
@@ -168,4 +194,4 @@ textarea {
   font-size:8px;
   right: 30px;
   bottom: 15px;
-}
+} */ 

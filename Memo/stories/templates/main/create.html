@@ -1,26 +1,35 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="{% static 'main/css/create.css' %}">
-  <script src="{% static 'main/js/jquery.js' %}"></script>
-  <script src="{% static 'main/js/create.js' %}"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'main/css/create.css' %}"> -->
+  <!-- <script src="{% static 'main/js/jquery.js' %}"></script>
+  <script src="{% static 'main/js/create.js' %}"></script> --> -->
   <title>Document</title>
 </head>
 <body>
   <form method="post">
+    <!-- <input type='text' placeholder="First Name" class='form-control'><br>
+    <input type='text' placeholder="Last Name" class='form-control'><br>
+    <textarea class="form-control" placeholder="Story"></textarea>
+    <input type='date' class='form-control'><br>
+    <input type='time' class='form-control'><br> -->
+    <button class="btn btn-succsss" type="submit">Add</button>
     {% csrf_token %}
     {{ form.name }}
     {{ form.surname }}
     {{ form.story }}
     {{ form.date }}
+    <span>{{ error }}</span>
     <!-- <div id="container">
       <span class="input">
         <input type="text" placeholder="" class="input__field" id="input-1" />
         <label for="input-1" class="input__label">
           <span class="input__label-content">First Name</span>
+          {% render_field form.name class='input__field'%}
       </label>
       </span>
 
@@ -28,6 +37,7 @@
         <input type="text" placeholder="" class="input__field" id="input-2" />
         <label for="input-2" class="input__label">
           <span class="input__label-content">Last Name</span>
+          {% render_field form.surname class='input__field'%}
         </label>
       </span>
 
@@ -35,6 +45,7 @@
         <input type="date" class="input__field" id="input-3" />
         <label for="input-3" class="input__label">
           <span class="input__label-content"></span>
+          {% render_field form.date class='input__field'%}
         </label>
       </span>
 
@@ -42,11 +53,12 @@
         <textarea class="input__field" id="input-5"></textarea>
         <label for="input-5" class="input__label">
           <span class="input__label-content">Message</span>
+          {% render_field form.story class='input__field'%}
         </label>
-      </span> -->
+      </span>
 
       <button id="send-button" type="submit">Send</button>
-    </div>
+    </div> -->
   </form>
 </body>
 </html>
