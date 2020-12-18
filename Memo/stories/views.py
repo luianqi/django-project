@@ -6,3 +6,5 @@ def endpage(request):
     return render(request, 'main/endpage.html', {'story': story})
 
 
+def create(request):
+    return render(request, 'news/create.html')
