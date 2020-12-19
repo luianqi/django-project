@@ -1,142 +1,125 @@
-.bgrnd
-{
-    width: 100%;
-
-}
-img {
-    width: 100%;
+body {
+  background-image: url('../img/img1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-img#slide {
-    position: absolute;
-    width: 230px;
-    top: 200px;
-    left: 800px;
-}
 
-ul {
-    position: absolute;
-    top: 150px;
-    left: 380px;
-    color: white;
-    font-family: sans-serif;
-    font-size: 60px;
-}
-
-h2.first {
-    margin: 0;
-    padding-left: 43%;
-    font-family: revert;
-    position: absolute;
-}
-
-h2.second {
-    /*margin: 0;*/
-    margin-top: 3%;
-    font-family: -webkit-pictograph;
-    font-weight: 100;
-    padding-top: 65px;
-}
-
-/*Animation*/
-.slide {
-    bottom: 627px;
-  width: 50px;
-  height: 80px;
-  position: relative;
-  left: 691px;
-  -webkit-animation: slideIn 2s forwards;
-  -moz-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
-}
-@-webkit-keyframes slideIn {
-  0% {
-    transform: translateX(600px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes slideIn {
-  0% {
-    transform: translateX(600px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideIn {
-  0% {
-    transform: translateX(600px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.logo {
-    bottom: 727px;
-  width: 50px;
-  height: 80px;
-  position: relative;
-  left: -166px;
+#title {
+  padding-top: 3vh;
   -webkit-animation: slidefd 2s forwards;
   -moz-animation: slidefd 2s forwards;
   animation: slidefd 2s forwards;
 }
-@-webkit-keyframes slidefd {
-  0% {
-    transform: translateX(-600px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes slidefd {
-  0% {
-    transform: translateX(-600px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slidefd {
-  0% {
-    transform: translateX(-600px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+h2 {
+    color: white;
+    font-size: 8.5vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-/*Button*/
+h2.first {
+    text-align: right;
+    font-family: revert;
+}
 
-.checkout {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 17px;
-    margin-bottom: 17px;}
+h2.second {
+    font-family: -webkit-pictograph;
+}
 
-.checkout {
-    text-align: center;
+table {
     position: absolute;
-    top: 510px;
-    left: 60px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.checkout button {
+table, th, td {
+    text-align: center;
+}
+
+#logo {
+  padding-left: 1vw;
+}
+
+#logo img {
+    width: 30vh;
+    -webkit-animation: slideIn 2s forwards;
+    -moz-animation: slideIn 2s forwards;
+    animation: slideIn 2s forwards;
+}
+
+
+@-webkit-keyframes slideIn {
+    0% {
+      transform: translateX(600px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @-moz-keyframes slideIn {
+    0% {
+      transform: translateX(600px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateX(600px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@-webkit-keyframes slidefd {
+    0% {
+      transform: translateX(-600px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @-moz-keyframes slidefd {
+    0% {
+      transform: translateX(-600px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slidefd {
+    0% {
+      transform: translateX(-600px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+#read {
+  padding-top: 4vh;
+}
+
+#read a button {
+    text-align: center;
     background: #d40e1e;
     border: none;
-    padding: 20px 60px;
+    padding: 1vh 3vw;
     color: white;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 3vh;
     text-transform: uppercase;
     transition: .5s;
 }
 
-.checkout button:hover {
+#read a button:hover {
     box-shadow: 0 0px 24px 4px #d40e1e;
     transition: .5s;
 }
