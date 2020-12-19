@@ -1,32 +1,15 @@
 from .models import Info
-from django.forms import ModelForm, TextInput, DateTimeInput, Textarea
+from django.forms import ModelForm, DateField, Textarea, CharField
 
 
 class InfoForm(ModelForm):
+    name = CharField()
+    surname = CharField()
+    story = Textarea()
+    date = DateField()
     class Meta:
         model = Info
         fields = ['name', 'surname', 'story', 'date']
 
-        widgets = {
-            'name': TextInput(attrs= {
-                'class': 'form-control',
-                'placeholder': '',
-                
-            }),
-            'surname': TextInput(attrs= {
-                'class': 'form-control',
-                'placeholder': '',
-              
-            }),
-            'story': Textarea(attrs= {
-                'class': 'form-control',
-                'placeholder': '',
-         
-            }),
-            'date': DateTimeInput(attrs= {
-                'class': 'form-control',
-                'placeholder': '',
-         
-    
-            })
-        }
+# text = forms.CharField(
+#         widget=forms.TextInput(attrs={'autofocus': True, 'class': 'form-control'}))
