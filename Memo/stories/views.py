@@ -6,6 +6,9 @@ def endpage(request):
     story = Info.objects.order_by('-date')
     return render(request, 'main/endpage.html', {'story': story})
 
+def unic(request):
+    return render(request, 'main/unic.html')
+
 def create(request):
     error = ''
     if request.method == 'POST':
