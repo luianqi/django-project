@@ -5,24 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<<<<<<< HEAD
-=======
-  <link rel="stylesheet" type="text/css" href="{% static 'main/css/create.css' %}">
-  <script src="{% static 'main/js/jquery.js' %}"></script>
-  <script src="{% static 'main/js/create.js' %}"></script>
->>>>>>> 290bd076d6a8825e49888457e264ff2425f5aa83
   <title>Document</title>
 </head>
 <body>
   <form method="post" action="{% url 'create' %}">
-<<<<<<< HEAD
-=======
-    <!-- <input type='text' placeholder="First Name" class='form-control'><br>
-    <input type='text' placeholder="Last Name" class='form-control'><br>
-    <textarea class="form-control" placeholder="Story"></textarea>
-    <input type='date' class='form-control'><br>
-    <input type='time' class='form-control'><br> -->
->>>>>>> 290bd076d6a8825e49888457e264ff2425f5aa83
     {% csrf_token %}
     {{ form.as_p }}
     <button class="btn btn-success" type="submit">Add</button>
