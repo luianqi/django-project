@@ -7,26 +7,26 @@ class InfoForm(ModelForm):
         model = Info
         fields = ['name', 'surname', 'story', 'date']
 
-        widgets = {
-            'name': TextInput(attrs= {
-                'class': 'form-control',
-                'placeholder': 'First Name',
+        # widgets = {
+        #     'name': TextInput(attrs= {
+        #         'class': 'form-control',
+        #         'placeholder': 'First Name',
                 
-            }),
-            'surname': TextInput(attrs= {
-                'class': 'form-control',
-                'placeholder': 'Last Name',
+        #     }),
+        #     'surname': TextInput(attrs= {
+        #         'class': 'form-control',
+        #         'placeholder': 'Last Name',
               
-            }),
-            'story': Textarea(attrs= {
-                'class': 'form-control',
-                'placeholder': 'Write Your Story',
+        #     }),
+        #     'story': Textarea(attrs= {
+        #         'class': 'form-control',
+        #         'placeholder': 'Write Your Story',
          
-            }),
-            'date': DateTimeInput(attrs= {
-                'class': 'form-control',
-                'placeholder': 'Date',
+        #     }),
+        #     'date': DateTimeInput(attrs= {
+        #         'class': 'form-control',
+        #         'placeholder': 'Date',
          
     
-            })
-        }
+        #     })
+        # }

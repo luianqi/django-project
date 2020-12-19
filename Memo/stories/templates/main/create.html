@@ -12,18 +12,18 @@
 </head>
 <body>
   <form method="post">
-    <!-- <input type='text' placeholder="First Name" class='form-control'><br>
+    <input type='text' placeholder="First Name" class='form-control'><br>
     <input type='text' placeholder="Last Name" class='form-control'><br>
     <textarea class="form-control" placeholder="Story"></textarea>
     <input type='date' class='form-control'><br>
-    <input type='time' class='form-control'><br> -->
-    <!-- <button class="btn btn-success" type="submit">Add</button> -->
+    <input type='time' class='form-control'><br>
+    <button class="btn btn-success" type="submit">Add</button>
     {% csrf_token %}
     {{ form.name }}
     {{ form.surname }}
     {{ form.story }}
     {{ form.date }}
-    <button class="btn btn-success" type="submit">Add</button>
+    <!-- <button class="btn btn-success" type="submit">Add</button> -->
     <span>{{ error }}</span>
     <!-- <div id="container">
       <span class="input">
