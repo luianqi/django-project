@@ -22,31 +22,31 @@
 }
 .container .section:nth-child(1)
 {
-    background: #f00 url(http://alatoo.edu.kg/image?img=image_6_5384685831127889689.jpg);
+    background: rgb(184, 154, 223) url('../alumni/al1.jpg') ;
     background-size: cover;
     background-attachment: fixed;
 }
 .container .section:nth-child(2)
 {
-    background: #0f0 url(http://alatoo.edu.kg/image?img=image_7_3324827550626054209.jpg);
+    background: #0f0 url('../alumni/al2.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
 .container .section:nth-child(3)
 {
-    background: #ff0 url(http://alatoo.edu.kg/image?img=image_10_7789081056381090399.jpg);
+    background: #ff0 url('../alumni/al4.webp');
     background-size: cover;
     background-attachment: fixed;
 }
 .container .section:nth-child(4)
 {
-    background: #0ff url(http://alatoo.edu.kg/image?img=image_12_5907837957260341671.jpg);
+    background: #0ff url('../alumni/al6.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
 .container .section:nth-child(5)
 {
-    background: #f00 url(http://alatoo.edu.kg/image?img=image_15_5608905042650334812.jpg);
+    background: #f00 url('../alumni/al5.jpg');
     background-size: cover;
     background-attachment: fixed;
 }

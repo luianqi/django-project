@@ -10,17 +10,19 @@
 	<body>
 	  	<section>
 	    	<div class="content">
-		      	<h2>Unic section population/</h2>
-		      	<h3>Short info population which exceeds.</h3>
-		      	<p>Overpopulation refers to a population which exceeds its sustainable size within a particular environment or habitat. Overpopulation results from an increased birth rate, decreased death rate, the immigration to a new ecological niche with fewer predators, or the sudden decline in available resources. Therefore, overpopulation describes a situation in which a population in a given ecosystem limit the resources available for survival.</p>
+		      	<h2>University History</h2>
+		      	<h3>Learn about how our beautiful university was founded!</h3>
+		      	<p>The state governing body of the university is the Ministry of Education and Science of the Kyrgyz Republic.
+					The founder of Ala-Too International University is Sapat International Educational Institutions.
+					Ala-Too International University (AIU) was established in 1996 and it is located in Bishkek, the Kyrgyz Republic...</p>
 		      	<a href="{% url 'unic' %}" href="#">Read More</a>
 	    	</div>
 	  	</section>
 	  	<section>
 	    	<div class="content">
-		      	<h2>Student section</h2>
-		      	<h3>Short info and consequently placed pressure on global resources.</h3>
-		      	<p>Overpopulation can have several effects on the environment, as well as other species within an ecological system. Indeed, human overpopulation has resulted in technological advances which have increased human lifespan and fertility, and consequently placed pressure on global resources. Such effects are such that the planet is currently in a novel geological epoch called the Anthropocene. In general, overpopulation results in an ecological disruption as resources are depleted. This disruption can lead to the decline of other populations which compete for the same resources. Typically, such effects result in the cycling between periods of population growth and periods of population decline until it can reach homeostasis within a particular ecological niche. Some examples of naturally regulated population growth are rodents, rabbits, and various insect populations (e.g., army worms and locusts).</p>
+		      	<h2>Alumni Story</h2>
+		      	<h3>How the Ala-Too alumni took advantage of the knowledge they gained here</h3>
+		      	<p>If you are Ala-Too alumni and if you have a story to share, please contact us marmeladki@gmail.com</p>
 				<a href="{% url 'endpage' %}" href="#">Read More</a>
 				{% if request.user.is_authenticated and request.user.is_staff %}
 				<a href="{% url 'create' %}" href="#">Add Story</a>
