@@ -6,56 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'main/css/create.css' %}">
-  <!-- <script src="{% static 'main/js/jquery.js' %}"></script>
-  <script src="{% static 'main/js/create.js' %}"></script> --> -->
+  <script src="{% static 'main/js/jquery.js' %}"></script>
+  <script src="{% static 'main/js/create.js' %}"></script>
   <title>Document</title>
 </head>
 <body>
-  <form method="post">
-    <input type='text' placeholder="First Name" class='form-control'><br>
+  <form method="post" action="{% url 'create' %}">
+    <!-- <input type='text' placeholder="First Name" class='form-control'><br>
     <input type='text' placeholder="Last Name" class='form-control'><br>
     <textarea class="form-control" placeholder="Story"></textarea>
     <input type='date' class='form-control'><br>
-    <input type='time' class='form-control'><br>
-    <button class="btn btn-success" type="submit">Add</button>
+    <input type='time' class='form-control'><br> -->
     {% csrf_token %}
-    {{ form.name }}
-    {{ form.surname }}
-    {{ form.story }}
-    {{ form.date }}
-    <!-- <button class="btn btn-success" type="submit">Add</button> -->
+    {{ form.as_p }}
+    <button class="btn btn-success" type="submit">Add</button>
     <span>{{ error }}</span>
-    <!-- <div id="container">
-      <span class="input">
-        <input type="text" placeholder="" class="input__field" id="input-1" />
-        <label for="input-1" class="input__label">
-          <span class="input__label-content">First Name</span>
-      </label>
-      </span>
-
-      <span class="input">
-        <input type="text" placeholder="" class="input__field" id="input-2" />
-        <label for="input-2" class="input__label">
-          <span class="input__label-content">Last Name</span>
-        </label>
-      </span>
-
-      <span class="input">
-        <input type="date" class="input__field" id="input-3" />
-        <label for="input-3" class="input__label">
-          <span class="input__label-content"></span>
-        </label>
-      </span>
-
-      <span class="input message">
-        <textarea class="input__field" id="input-5"></textarea>
-        <label for="input-5" class="input__label">
-          <span class="input__label-content">Message</span>
-        </label>
-      </span>
-
-      <button id="send-button" type="submit">Send</button>
-    </div> -->
   </form>
 </body>
 </html>

@@ -13,11 +13,9 @@ def create(request):
         form = InfoForm(request.POST)
         if form.is_valid():
             form.save()
-        else:
-            error = 'Form is invalid'
-            return redirect('slider')
-
-    form = InfoForm()
+            return redirect('endpage')
+    else:
+        form = InfoForm()
 
     data = {
         'form': form,
@@ -26,6 +24,3 @@ def create(request):
 
 
     return render(request, 'main/create.html', data)
-   
-
-   

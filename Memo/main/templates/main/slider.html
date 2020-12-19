@@ -22,7 +22,9 @@
 		      	<h3>Short info and consequently placed pressure on global resources.</h3>
 		      	<p>Overpopulation can have several effects on the environment, as well as other species within an ecological system. Indeed, human overpopulation has resulted in technological advances which have increased human lifespan and fertility, and consequently placed pressure on global resources. Such effects are such that the planet is currently in a novel geological epoch called the Anthropocene. In general, overpopulation results in an ecological disruption as resources are depleted. This disruption can lead to the decline of other populations which compete for the same resources. Typically, such effects result in the cycling between periods of population growth and periods of population decline until it can reach homeostasis within a particular ecological niche. Some examples of naturally regulated population growth are rodents, rabbits, and various insect populations (e.g., army worms and locusts).</p>
 				<a href="{% url 'endpage' %}" href="#">Read More</a>
+				{% if request.user.is_authenticated and request.user.is_staff %}
 				<a href="{% url 'create' %}" href="#">Add Story</a>
+				{% endif %}
 	    	</div>
 	    </section>
 	    <script src="{% static 'main/css/scroll-out.js' %}"></script>
