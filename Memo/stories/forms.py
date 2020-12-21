@@ -11,5 +11,3 @@ class InfoForm(ModelForm):
         model = Info
         fields = ['name', 'surname', 'story', 'date']
 
-# text = forms.CharField(
-#         widget=forms.TextInput(attrs={'autofocus': True, 'class': 'form-control'}))

@@ -19,19 +19,18 @@ var ScrollOut = (function () {
         return cache[value] || (cache[value] = value.replace(/([A-Z])/g, replacer));
     }
   
-    /** find elements */
     function $(e, parent) {
         return !e || e.length === 0
-            ? // null or empty string returns empty array
+            ?
                 []
             : e.nodeName
-                ? // a single element is wrapped in an array
+                ? 
                     [e]
-                : // selector and NodeList are converted to Element[]
+                : 
                     [].slice.call(e[0].nodeName ? e : (parent || document.documentElement).querySelectorAll(e));
     }
     function setAttrs(el, attrs) {
-        // tslint:disable-next-line:forin
+       
         for (var key in attrs) {
             if (key.indexOf('_')) {
                 el.setAttribute('data-' + hyphenate(key), attrs[key]);
@@ -77,15 +76,8 @@ var ScrollOut = (function () {
     }
     function noop() { }
   
-    /**
-     * Creates a new instance of ScrollOut that marks elements in the viewport with
-     * an "in" class and marks elements outside of the viewport with an "out"
-     */
-    // tslint:disable-next-line:no-default-export
     function main (opts) {
-        // Apply default options.
         opts = opts || {};
-        // Debounce onChange/onHidden/onShown.
         var onChange = opts.onChange || noop;
         var onHidden = opts.onHidden || noop;
         var onShown = opts.onShown || noop;
@@ -103,14 +95,12 @@ var ScrollOut = (function () {
             elementContextList = $(opts.targets || '[data-scroll]', $(opts.scope || doc)[0]).map(function (el) { return ({ element: el }); });
         }
         function update() {
-            // Calculate position, direction and ratio.
             var clientWidth = doc.clientWidth;
             var clientHeight = doc.clientHeight;
             var scrollDirX = sign(-clientOffsetX + (clientOffsetX = doc.scrollLeft || window.pageXOffset));
             var scrollDirY = sign(-clientOffsety + (clientOffsety = doc.scrollTop || window.pageYOffset));
             var scrollPercentX = doc.scrollLeft / (doc.scrollWidth - clientWidth || 1);
             var scrollPercentY = doc.scrollTop / (doc.scrollHeight - clientHeight || 1);
-            // Detect if the root context has changed.
             rootChanged =
                 rootChanged ||
                     scrollingElementContext.scrollDirX !== scrollDirX ||
@@ -125,7 +115,6 @@ var ScrollOut = (function () {
             for (var index_1 = 0; index_1 < elementContextList.length; index_1++) {
                 var ctx = elementContextList[index_1];
                 var element = ctx.element;
-                // find the distance from the element to the scrolling container
                 var target = element;
                 var offsetX = 0;
                 var offsetY = 0;
@@ -134,10 +123,8 @@ var ScrollOut = (function () {
                     offsetY += target.offsetTop;
                     target = target.offsetParent;
                 } while (target && target !== container);
-                // Get element dimensions.
                 var elementHeight = element.clientHeight || element.offsetHeight || 0;
                 var elementWidth = element.clientWidth || element.offsetWidth || 0;
-                // Find visible ratios for each element.
                 var visibleX = (clamp(offsetX + elementWidth, clientOffsetX, clientOffsetX + clientWidth) -
                     clamp(offsetX, clientOffsetX, clientOffsetX + clientWidth)) /
                     elementWidth;
@@ -197,7 +184,6 @@ var ScrollOut = (function () {
         }
         function render() {
             maybeUnsubscribe();
-            // Update root attributes if they have changed.
             if (rootChanged) {
                 rootChanged = false;
                 setAttrs(doc, {
@@ -212,7 +198,7 @@ var ScrollOut = (function () {
                 var ctx = elementContextList[x];
                 var el = ctx.element;
                 var visible = ctx.visible;
-                var justOnce = el.hasAttribute('scrollout-once') || false; // Once
+                var justOnce = el.hasAttribute('scrollout-once') || false; 
                 if (ctx._changed) {
                     ctx._changed = false;
                     props(el, ctx);
@@ -222,8 +208,7 @@ var ScrollOut = (function () {
                     onChange(el, ctx, doc);
                     (visible ? onShown : onHidden)(el, ctx, doc);
                 }
-                // if this is shown multiple times, keep it in the list
-                if (visible && (opts.once || justOnce)) { // or if this element just display it once
+                if (visible && (opts.once || justOnce)) { 
                     elementContextList.splice(x, 1);
                 }
             }
@@ -234,11 +219,9 @@ var ScrollOut = (function () {
                 sub = undefined;
             }
         }
-        // Run initialize index.
         index();
         update();
         render();
-        // Collapses sequential updates into a single update.
         var updateTaskId = 0;
         var onUpdate = function () {
             updateTaskId = updateTaskId || setTimeout(function () {
@@ -246,7 +229,6 @@ var ScrollOut = (function () {
                 update();
             }, 0);
         };
-        // Hook up document listeners to automatically detect changes.
         window.addEventListener('resize', onUpdate);
         container.addEventListener('scroll', onUpdate);
         return {
